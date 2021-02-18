@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- 实现表情包的css -->
+    <link rel="stylesheet" href="lib/jquery-mCustomScrollbar/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="lib/jquery-emoji/css/jquery.emoji.css ">
+    <title>聊天页面</title>
+</head>
+
+<body>
+    <main class="main">
+        <!-- 聊天窗体 -->
+        <section class="moreChatView">
+            <!-- 头部走马灯 -->
+            <header>
+                <marquee class="marquee"><span class="joinName">wwww</span></marquee>
+            </header>
+            <!-- 聊天内容区 -->
+            <section class="chat">
+            </section>
+            <!-- 发送消息区 -->
+            <section class="send">
+                <div class="img_div">
+                    <img class="face" src="imgs/表情.png">
+                    <img class="openDiv" src="imgs/GIF.png" onclick="sendImgs(this)">
+                </div>
+                <div class="bottom_send">
+                    <div class="content_div">
+                        <div id="content" class="content" placeholder="请输入文字" contenteditable="true"
+                            style="overflow:hidden"></div>
+                    </div>
+                    <div class="send_button">
+                        <button><img id="send_btn" src="imgs/发送.png"></button>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- 用户列表侧边栏 -->
+        <aside class="userListView">
+            <div>(点击用户私聊)</div>
+            <div class="showOnlineUser">在线用户：<span class="onlineNums">2</span> 人</div>
+            <ul class="userUl">
+                <li class="userli">
+                    <img height="30px" width="30px" src="imgs/head07.jpg">
+                    <span>username111</span>
+                </li>
+                <li class="userli">
+                    <img height="30px" width="30px" src="imgs/head04.jpg">
+                    <span>username111</span>
+                </li>
+                <li class="userli">
+                    <img height="30px" width="30px" src="imgs/head06.jpg">
+                    <span>username1</span>
+                </li>
+            </ul>
+        </aside>
+    </main>
+    <!-- 实现表情包需要的js -->
+    <script src="lib/jquery-mCustomScrollbar/script/jquery.min.js"></script>
+    <script src="lib/jquery-mCustomScrollbar/script/jquery.mCustomScrollbar.min.js"></script>
+    <script src="lib/jquery-emoji/js/jquery.emoji.js"></script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>

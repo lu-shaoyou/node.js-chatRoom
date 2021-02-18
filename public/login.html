@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <title>登录界面</title>
+</head>
+
+<body>
+    <main class="container">
+        <form class="loginForm" action="/doLogin" method="POST">
+            <header class="form_header">
+                <div class="title"><strong>吃瓜群众聚集地</strong></div>
+                <input class="input" type="text" name="userName" placeholder="请输入用户名">
+                <input class="hidden" type="hidden" name="headSrc">
+            </header>
+            <img class="swiper-button-next" id="leftArrow" src="imgs/leftArrow.png">
+            <img class="swiper-button-prev" id="rightArrow" src="imgs/rightArror.png">
+            <div class="imgFrame">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="imgs/head01.jpg">
+                            <img src="imgs/head02.jpg">
+                            <img src="imgs/head03.jpg">
+                            <img src="imgs/head04.jpg">
+                            <img src="imgs/head05.jpg">
+                            <img src="imgs/head06.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/head07.jpg">
+                            <img src="imgs/head08.jpg">
+                            <img src="imgs/head09.jpg">
+                            <img src="imgs/head10.jpg">
+                            <img src="imgs/head11.jpg">
+                            <img src="imgs/head12.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/head13.jpg">
+                            <img src="imgs/head14.jpg">
+                            <img src="imgs/head15.jpg">
+                            <img src="imgs/head16.jpg">
+                            <img src="imgs/head17.jpg">
+                            <img src="imgs/head18.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/head19.jpg">
+                            <img src="imgs/head20.jpg">
+                            <img src="imgs/head21.jpg">
+                            <img src="imgs/head22.jpg">
+                            <img src="imgs/head23.jpg">
+                            <img src="imgs/head24.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/head25.jpg">
+                            <img src="imgs/head26.jpg">
+                            <img src="imgs/head27.jpg">
+                            <img src="imgs/head28.jpg">
+                            <img src="imgs/head29.jpg">
+                            <img src="imgs/head30.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="imgs/head31.jpg">
+                            <img src="imgs/head32.jpg">
+                            <img src="imgs/head33.jpg">
+                            <img src="imgs/head34.jpg">
+                            <img src="imgs/head35.jpg">
+                            <img src="imgs/head36.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonFrame">
+                <button class="btn">进入聊天室</button>
+            </div>
+        </form>
+    </main>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/login.js"></script>
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+
+</html>
